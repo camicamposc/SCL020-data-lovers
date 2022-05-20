@@ -2,36 +2,46 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: stretch;
     background-image: url("image/background.png");
-    background-size: 100% 115%;
+    background-size: cover;
     background-attachment: fixed;
     font-family: "Segoe UI";
-    color: white;  
+    color: white; 
+    min-height: 100%;
+    margin: 0;
 }
-a {
-    display: flex;
-    justify-content: center;
+header{
+    align-self: center;
+} 
+#icon{
+    max-width: 100%;
 }
-a img {
-    width: 80%;
-}
-/* estilos de la primera vista */
 #screen1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
     letter-spacing: 0.35em;
     font-weight: bold;
     font-size: xx-large;
+    min-height: 60vh;  
 }
+#buttonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+#filterByAge{
+    justify-content: center;
+}
+
 .question {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .buttons {
-    width: 100px;
-    height: 35px;
-    margin: 40px 100px;
+    width: 15%;
     border-radius: 5px;
     border-width: 3px;
     border-color: #9EFB07;
@@ -43,7 +53,11 @@ a img {
     font-family: "Segoe UI";
     font-size: large;
 }
-/* estilos de la segund vista */
+/* screen2 */
+#screen2{
+    min-height: 60vh;
+    
+}
 #welcome {
     display: flex;
     flex-direction: column;
@@ -57,7 +71,7 @@ a img {
 #information {
     font-size: x-large;
 }
-/* -- Estilos de la busqueda por nombre --*/
+/* -- search by name --*/
 #messageError {
     display: flex;
     justify-content: center;
@@ -68,6 +82,8 @@ a img {
 #formByName {
     display: flex;
     justify-content: center;
+    min-width: 100%;
+    gap: 1%;
 }
 #searchByName {
     background-color: #057f8f;
@@ -75,16 +91,13 @@ a img {
     border-color: #9EFB07;
     color: white;
     font-weight: bolder;
-    width: 400px;
     height: 40px;
     font-size: large;
     letter-spacing: 0.25em;
 }
 #goName {
     background-color: #08B2C9;
-    width: 60px;
     height: 46px;
-    margin-left: 80px;
     color: #9EFB07;
     font-weight: bolder;
     font-size: large;
@@ -92,41 +105,45 @@ a img {
     border-color: #9EFB07;
     border-radius: 5px;
 }
-/* -- Estilos de los selectores --*/
+/* -- selectors--*/
 #allSelectors {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     font-weight: bold;
     letter-spacing: 0.25em;
     font-size: large;
-    width: 100%;
-    margin: 50px 0;
+    gap: 1%;
+
 }
 .selectorContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: x-large;
+    flex-grow: 1;
+
 }
 .selectors {
     background-color:#057f8f;
     border-color: #9EFB07;
     color: white;
     border-radius: 5px;
-    width: 300px;
     height: 40px;
     font-size: medium;
-    letter-spacing: 0.25em;
+    align-self: stretch;
 }
-/* estilos de listado y tarjeta */
+/* list and card */
 #listAsSelected {
     margin: 50px 40%;
 }
 #screenCard {
-    margin: 20px 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #closed {
-    margin: 10% 50%;
     background: #08B2C9;
     border: #9EFB07 solid 3px;
     border-radius: 3px;
@@ -137,13 +154,11 @@ a img {
     border: #9EFB07 solid 3px;
     border-radius: 3px;
 }
-/* -- Estilos del footer --*/
+/* -- footer --*/
 footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 50px 50px 0 50px;
-    font-size: medium;
 }
 #linkGame {
     display: flex;
@@ -168,190 +183,9 @@ footer {
     max-width: 35px;
     margin: 0 0 3px 0;
 }
-/* responsivo para celular */
-@media (max-width: 360px){
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-image: url("image/background.png");
-        background-size: 120% 115%;
-        background-attachment: fixed;
-        font-family: "Segoe UI";
-        color: white;  
-    }
-    a {
-        display: flex;
-        justify-content: center;
-    }
-    a img {
-        width: 100%;
-        margin-top: 40px;
-    }
-    /* estilos de la primera vista */
-    #screen1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        letter-spacing: 0.15em;
-        font-weight: bold;
-        font-size: x-large;
-        text-align: center;
-    }
-    .question {
-        display: flex;
-        justify-content: center;
-        margin: 70px 0;
-    }
-    #buttons {
-        display: flex;
-    }
-    .buttons {
-        display: flex;
-        justify-content: center;
-        width: 80px;
-        height: 35px;
-        border-radius: 5px;
-        border-width: 3px;
-        border-color: #9EFB07;
-        color: #9EFB07;
-        font-weight: bolder;
-        text-align: center;
-        text-shadow: 0 0 3px #365503;
-        background-color: #08B2C9;
-        letter-spacing: 0.25em;
-        font-family: "Segoe UI";
-        font-size: large;
-        margin: 30px;
-    }
-    /* estilos de la segund vista */
-    #welcome {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 0.35em;
-    }
-    #welcomeText {
-        font-size: xx-large; 
-        font-weight: bolder;  
-    }
-    #information {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: x-large;
-        font-weight: lighter;
-    }
-    /* -- Estilos de la busqueda por nombre --*/
-    #messageError {
-        display: flex;
-        justify-content: center;
-        color: #9EFB07;
-        font-weight: bolder;
-        letter-spacing: 0.25em;
-    }
-    #formByName {
-        display: flex;
-        justify-content: space-around;    
-    }
-    #searchByName {
-        background-color: #057f8f;
-        border-radius: 5px;
-        border-color: #9EFB07;
-        color: white;
-        font-weight: bolder;
-        width: 200px;
-        height: 40px;
-        font-size: large;
-        letter-spacing: 0.25em;
-    }
-    #goName {
-        background-color: #08B2C9;
-        width: 50px;
-        height: 46px;
-        margin-left: 80px;
-        color: #9EFB07;
-        font-weight: bolder;
-        font-size: large;
-        letter-spacing: 0.25em;
-        border-color: #9EFB07;
-        border-radius: 5px;
-    }
-    /* -- Estilos de los selectores --*/
-    #allSelectors {
-        display: flex;
-        flex-direction: column;
-        font-weight: bold;
-        letter-spacing: 0.25em;
-        font-size: large;
-        width: 100%;
-        margin: 50px 0;
-    }
-    .selectorContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 30px 0;
-        font-size: x-large;
-    }
-    .selectors {
-        background-color:#057f8f;
-        border-color: #9EFB07;
-        color: white;
-        border-radius: 5px;
-        width: 300px;
-        height: 40px;
-        font-size: medium;
-        letter-spacing: 0.25em;
-    }
-    /* estilos de listado y tarjeta */
-    #cardCharacter {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #cardCharacter img {
-        margin: 10px 0;
-        width: 150px;
-    }
-    #closed {
-        margin: 10% 50%;
-        background: #08B2C9;
-        border: #9EFB07 solid 3px;
-        border-radius: 3px;
-    }
-    #closeList {
-        margin: 10% 40%;
-        background: #08B2C9;
-        border: #9EFB07 solid 3px;
-        border-radius: 3px;
-    }
-    /* -- Estilos del footer --*/
-    footer {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-size: smaller;
-        margin: 100px 0 0 0;
-    }
-    #linkGame {
-        display: flex;
-        align-items: center;
-        color: black;
-        font-weight: bolder;
-        text-shadow: 0 0 3px #9EFB07;
-        text-decoration: underline;
-        width: 50%;
-        font-size: x-small;
-    }
-    #socialMedia img {      
-        width: 30px;
-        margin-top: 10px;
-    }
-    #facebook {
-        max-width: 35px;
-        margin: 0 0 3px 0;
-    }
+#cardCharacter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

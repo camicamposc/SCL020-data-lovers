@@ -12,6 +12,7 @@
       <nav>
         <a href="index.html">
           <img
+            id="icon"
             src="https://github.com/camicamposc/SCL020-data-lovers/blob/main/src/image/logoRickAndMorty.png?raw=true"
             alt="logoRickAndMorty"
         /></a>
@@ -26,13 +27,13 @@
           </p>
           <p id="questionTwo" class="question">Are you over oigtheen?</p>
         </div>
-        <div id="buttons">
+        <div id="buttonsContainer">
           <button id="yes" class="buttons">Yes</button>
           <button id="no" class="buttons">No</button>
         </div>
       </div>
       <!--------------------------- screen2 ----------------------------Selectors---------------->
-      <div id="screen2" class="shade">
+      <div id="screen2">
         <div id="welcome">
           <p id="welcomeText">Welcome</p>
           <p id="information">You can search for name:</p>
@@ -43,15 +44,19 @@
         </div>
         <form id="formByName">
           <!-- <label for="searchByName">Search by Name</label> -->
-          <input
-            list="dataNames"
-            id="searchByName"
-            name="searchByName"
-            type="text"
-            autocomplete="off"
-          />
+          <div id="inputName">
+            <input
+              list="dataNames"
+              id="searchByName"
+              name="searchByName"
+              type="text"
+              autocomplete="off"
+            />
+          </div>
           <div id="lookDataNames"></div>
-          <button id="goName">Go</button>
+          <div>
+            <button id="goName">Go</button>
+          </div>
         </form>
 
         <div id="allSelectors">
@@ -111,7 +116,7 @@
             src="https://github.com/camicamposc/SCL020-data-lovers/blob/main/src/image/Facebook.png?raw=true"
           />
         </a>
-        <a href="">
+        <a href="https://www.instagram.com/rickandmorty/">
           <img
             id="instagram"
             src="https://github.com/camicamposc/SCL020-data-lovers/blob/main/src/image/Instagram.png?raw=true"

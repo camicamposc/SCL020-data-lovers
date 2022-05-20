@@ -95,7 +95,7 @@ go.addEventListener("click", (event) => {
     messageError.innerHTML = "Name not found, try again";
   } else {
     screen2.style.display = "none";
-    screenCard.style.display = "block";
+    screenCard.style.display = "flex";
     let allCharacters = "";
     dataCharacterSelected.forEach((character) => {
       let totalEpisodes = count(character.episode);
@@ -194,7 +194,7 @@ let innerDataAndCard = (namesSelector, value) => {
     name.addEventListener("click", () => {
       dataCharacterSelected = filterData(name.textContent, allInfo, value);
       screen2.style.display = "none";
-      screenCard.style.display = "block";
+      screenCard.style.display = "flex";
       listAsSelected.style.display = "none";
       let allCharacters = "";
       dataCharacterSelected.forEach((character) => {
